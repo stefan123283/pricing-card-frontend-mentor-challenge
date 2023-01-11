@@ -1,128 +1,38 @@
-html{
-  box-sizing: border-box;
-  font-family: 'Karla', sans-serif;
-  font-size: 16px;
+body {
+    padding: 20px;
 }
 
-body{
-  padding: 20px;
+#card {
+    width: 100%; /* Set the width to be a percentage */
+    height: auto; /* Set the height to be automatic */
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 5px;
+    overflow: hidden;
 }
 
-h2,h4,p{
-  margin: 0;
+#top-section {
+    width: 100%; /* Set the width to be a percentage */
+    padding: 25px;
 }
 
-*, *:before, *:after{
-  box-sizing: inherit;
+#bottom-section {
+    width: 100%; /* Set the width to be a percentage */
+    height: auto; /* Set the height to be automatic */
+    color: white;
+    display: flex; /* using flex display allows the elements inside to be responsive */
 }
 
-#card{
-  width: 600px;
-  height: 400px;
-  box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.75);
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-#top-section{
-  width: 100%;
-  height: 45%;
-  padding: 25px;
-}
-
-#bottom-section{
-  width: 100%;
-  height: 55%;
-  color: white;
-}
-
-#left-bottom-section{
-  vertical-align: top;
-  display: inline-block;
-  width: 50%;
-  height: 100%;
-  background-color: #2ab2af;
-  padding: 25px;
-}
-
-#right-bottom-section{
-  vertical-align: top;
-  display: inline-block;
-  width: 50%;
-  height: 100%;
-  background-color: #2ebfbd;
-  padding: 25px;
-}
-
-#top-section h2{
-  color: #2ab2af;
-  margin-bottom: 20px;
-}
-
-#top-section h4{
-  color: #c0df34;
-  margin-bottom: 10px;
-}
-
-#top-section p{
-  color: #98a6bd;
-}
-
-button{
-  color: white;
-  background-color: #c0df34;
-  border: none;
-  padding: 10px;
-  width: 100%;
-  border-radius: 5px;
-}
-
-button:hover{
-  cursor: pointer;
-  background-color: #a9c42d;
-  transform: scale(1.02);
-}
-
-#price{
-  font-weight: 700;
-  font-size: 1.4rem;
-}
-
-#left-bottom-section h4{
-  margin-bottom: 25px;
-}
-
-#left-bottom-section p{
-  font-size: 0.8rem;
-  margin-bottom: 40px;
-}
-
-#price-frequency, #price{
-  display: inline-block;
-}
-
-#price-frequency{
-  position: relative;
-  top: -3px;
-  font-size: 0.8rem;
-  opacity: 0.7;
-  margin-left: 5px;
-}
-
-#price-container{
-  margin-bottom: 10px;
-}
-
-ul{
-  padding: 0;
-  list-style: none;
-  font-size: 0.8rem;
-  opacity: 0.7;
-}
-
-@media (max-width: 650px){
-  #left-bottom-section, #right-bottom-section, #card{
+#left-bottom-section, #right-bottom-section {
+    /* Set the width to be a percentage and add flex-basis, also set height to be automatic*/
     width: 100%;
     height: auto;
-  }  
+    flex-basis: 50%;
+    padding: 25px;
+}
+
+/* Add this media query to adjust the layout on screens that are less than 650px wide */
+@media (max-width: 650px) {
+    #left-bottom-section, #right-bottom-section {
+        flex-basis: 100%;
+    }
 }
